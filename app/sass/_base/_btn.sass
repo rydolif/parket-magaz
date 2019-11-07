@@ -1,25 +1,45 @@
 .btn
 	position: relative
 	display: inline-block
-	height: 40px
-	padding: 0 60px
+	height: 55px
+	line-height: 55px
 	border: none
 	outline: none
-	background: #fff
 	text-align: center
-	border: 1px solid $accent
 	transition: all .6s
-	font-size: 16px
-	letter-spacing: .2px
-	font-weight: 700
-	color: $accent
-	line-height: 40px
+	letter-spacing: .4px
+	font-weight: 600
+	font-size: 24px
+	text-transform: uppercase
+	cursor: pointer
 
 	&:hover,
 	&:focus
 		outline: none
-		text-decoration: none
-		cursor: pointer
-		box-shadow: 0 0 10px rgba($accent, 1)
-		background-color: $accent
-		color: #fff
+		color: $white
+
+	&--red
+		padding: 0 120px
+		background: $red
+		color: $white
+	
+		&:hover,
+		&:focus
+			box-shadow: 0 0 10px 0 rgba($red, 1)
+
+	&--cart
+		background-color: $gray
+		width: 100%
+		color: $text
+
+		svg
+			width: 20px
+			margin-right: 15px
+
+		&:hover,
+		&:focus
+			background-color: $accent
+			box-shadow: 0 0 10px 0 rgba($accent, 1)
+
+			svg
+				fill: $white

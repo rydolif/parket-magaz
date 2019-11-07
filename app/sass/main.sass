@@ -157,7 +157,7 @@
 		
 		&:hover,
 		&:focus
-			background-color: $grey
+			background-color: $gray
 
 	li
 		position: relative
@@ -204,13 +204,307 @@
 		margin: 25px 0
 
 
+.hero
+	background-image: url(../img/hero.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	padding: 
+		bottom: 200px
+		top: 140px
+	color: $white
+
+	p
+		font-size: 24px
+		margin-bottom: 40px
+	
+
+.tabs
+	padding:
+		top: 50px
+		bottom: 80px
+
+	&__list
+		display: flex
+		justify-content: space-around
+		border-bottom: 1px solid #e1e1e1
+		margin-bottom: 130px
+
+	&__link
+		position: relative
+		display: block
+		font-size: 24px
+		padding: 
+			left: 65px
+			right: 65px
+			bottom: 25px
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: -2px
+			height: 3px
+			width: 100%
+			background-color: $text
+			border-radius: 5px
+			opacity: 0
+			transition: all .6s
+
+		&--active
+			&::before
+				opacity: 1
+	
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		margin: 0 -15px
+
+
+.cart
+	position: relative
+	width: 25%
+	padding: 15px
+	margin-bottom: 95px
+	transition: all .6s
+
+	&:hover,
+	&:focus
+		background-color: $gray
+		margin-top: -55px
+
+		.btn--cart
+			background-color: $accent
+			color: $white
+			fill: $white
+
+		.cart__price
+			opacity: 1
+			height: 22px
+			transform: scale(1)
+
+		.cart__form_quantity
+			margin-bottom: 20px
+
+	h4
+		font-size: 18px
+		margin-bottom: 25px
+		text-transform: none
+
+	&__img
+		position: relative
+		margin-bottom: 35px
+
+		&:hover,
+		&:focus
+			.cart__img_plus
+				opacity: 1
+
+		img
+			width: 100%
+			height: auto
+
+		a
+			display: block
+
+		&_plus
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 45px
+			height: 45px
+			border-radius: 50%
+			transition: all .6s
+			background-color: rgba($white, .6)
+			opacity: 0
+
+			span
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 1px
+				height: 20px
+				background-color: #000
+
+				&:last-child
+					transform: translate(-50%, -50%) rotate(90deg)
+
+	&__info
+		margin-bottom: 15px
+
+		p
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			line-height: 1
+			align-items: center
+			margin-bottom: 5px
+
+			&:last-child
+				margin-bottom: 0
+
+		&_price
+			font-size: 24px
+			font-weight: 700
+
+		&_old
+			color: #b5b5b5
+			text-decoration: line-through
+
+	&__form
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 20px
+
+		input
+			width: 75px
+			height: 35px
+			border: 1px solid $gray
+			text-align: center
+			background-color: $white
+			color: $text
+			font-weight: 500
+			font-size: 16px
+			margin: 0 5px
+
+		a
+			display: block
+			background-color: #dfe1e0
+			height: 35px
+			width: 35px
+			line-height: 35px
+			text-align: center
+			font-size: 22px
+			font-weight: 700
+
+		&_quantity
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			margin-bottom: 0
+			transition: all .6s
+
+		&_block		
+			p
+				font-size: 16px
+				color: #cbcdcc
+				margin-bottom: 15px
+
+	&__price
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		line-height: 1
+		width: 100%
+		font-size: 18px 
+		color: $text
+		transition: all .6s
+		opacity: 0
+		height: 0
+		transform: scale(0)
+		
+		&_green
+			color: $accent
+			font-weight: 500
+
+		b
+			font-size: 24px
+	
+	&__next,
+	&__prev
+		background-image: none
+		background-color: rgba($white, .6)
+		top: auto
+		bottom: 0
+		width: 40px
+		height: 55px
+		margin-top: 0
+		z-index: 1
+		transition: all .6s
+		pointer-events: all !important
+
+		&:hover,
+		&:focus
+			span
+				left: 50%
+
+		span
+			position: absolute
+			top: 50%
+			width: 12px
+			height: 12px
+			border-top: 2px solid #000
+			border-left: 2px solid #000
+			transition: all .6s
+
+	&__next
+		right: 0
+
+		span
+			transform: translate(-50%, -50%) rotate(135deg)
+			left: 20%
+
+	&__prev
+		right: 40px
+		left: auto
+
+		span
+			transform: translate(-50%, -50%) rotate(-45deg)
+			left: 80%
+
+	&__block
+		position: absolute
+		top: 13px
+		left: 13px
+		right: 13px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		z-index: 1
+
+		a
+			position: relative
+			display: block
+			background-color: rgba($white, .6)
+			width: 28px
+			height: 25px
+
+			&:hover,
+			&:focus
+				svg
+					fill: red
+
+		svg
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 18px
+			height: auto
+
+		span
+			height: 25px
+			display: inline-block
+			line-height: 25px
+			padding: 0 15px
+
+		&_white
+			background-color: rgba($white, .6)
+			
+
+		&_sale
+			background-color: $red !important
+			color: $white !important
+
+
 .footer
 	line-height: 1.6
-
-	h3
-		font-size: 24px
-		text-transform: uppercase
-		margin-bottom: 45px
 
 	&__container
 		display: flex
