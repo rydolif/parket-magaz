@@ -1,7 +1,8 @@
 // font-weight helper:
 
 // 100 Extra Light or Ultra Light;
-// 200 Light or Thin; 300 Book or Demi;
+// 200 Light or Thin; 
+// 300 Book or Demi;
 // 400 Regular or Normal;
 // 500 Medium;
 // 600 Semibold or Demibold;
@@ -18,9 +19,14 @@
 		src: url($f-url) format('woff2')
 
 
-@include font('ProximaNova', normal, 900, '../webfonts/ProximaNovaBlack.woff2')
-@include font('ProximaNova', normal, 800, '../webfonts/ProximaNovaExtraBold.woff2')
-@include font('ProximaNova', normal, 700, '../webfonts/ProximaNovaBold.woff2')
-@include font('ProximaNova', normal, 600, '../webfonts/ProximaNovaSemiBold.woff2')
-@include font('ProximaNova', normal, 400, '../webfonts/ProximaNovaRegular.woff2')
-@include font('ProximaNova', normal, 300, '../webfonts/ProximaNovaLight.woff2')
+@include font('Futura', italic, 200, '../webfonts/FuturaLightC.woff2')
+@include font('Futura', normal, 200, '../webfonts/FuturaBookC.woff2')
+
+@include font('Futura', italic, 300, '../webfonts/FuturaDemiC-Italic.woff2')
+@include font('Futura', normal, 300, '../webfonts/FuturaDemiC.woff2')
+
+@include font('Futura', italic, 400, '../webfonts/FuturaBookC-Italic.woff2')
+@include font('Futura', normal, 400, '../webfonts/FuturaBookC.woff2')
+
+@include font('Futura', italic, 500, '../webfonts/FuturaMediumC-Italic.woff2')
+@include font('Futura', normal, 500, '../webfonts/FuturaMediumC.woff2')
