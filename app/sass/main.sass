@@ -1,7 +1,10 @@
 @import "libs"
 @import "base"
 
+.no-scroll
+	overflow: hidden
 
+	
 .container
 	max-width: 1440px
 	width: 100%
@@ -25,7 +28,7 @@
 	transition: all .6s
 	z-index: 1001
 	line-height: 1.2
-	border: 1px solid #dfe1e0
+	border-bottom: 1px solid #dfe1e0
 
 	&__container,
 	&__block,
@@ -46,23 +49,37 @@
 			flex-direction: column
 
 		img
+			width: 20px
 			margin-right: 13px
+
+	&__in
+		width: 20px
+		height: 20px
+		display: block
 
 	&__time
 		text-align: right
 
 		img
 			margin-left: 13px
+			width: 20px
+			height: auto
+			
 
 	&__logo
 		margin: 0 25px
 
 	&__place
 		img
+			width: 20px
 			margin-right: 13px
 
 	&__info
 		z-index: 1
+
+		img
+			height: 20px
+			width: 20px
 
 		a, div
 			margin-right: 20px
@@ -110,12 +127,10 @@
 			padding: 10px
 			background-color: $white
 			box-shadow: 0 0 5px 0 rgba($text, .5)
-			border-radius: 5px
 			z-index: -1
 			opacity: 0
 			transition: all .6s
 			text-align: right
-
 
 		li
 			margin-bottom: 5px
@@ -142,9 +157,12 @@
 
 
 .nav
-	font-size: 18px
 	line-height: 1.2
 	box-shadow: 0 5px 5px 0 rgba(#2a291e, .2)
+	z-index: 1000
+
+	&__media
+		display: none
 
 	ul
 		display: flex
@@ -166,7 +184,7 @@
 		&:focus
 			ul
 				top: 50px
-				z-index: 1
+				z-index: 2
 				opacity: 1
 
 		&:last-child
@@ -204,6 +222,13 @@
 		margin: 25px 0
 
 
+.favorites
+	padding: 55px 0
+
+	h2
+		margin-bottom: 65px
+
+
 .hero
 	background-image: url(../img/hero.png)
 	background-size: cover
@@ -217,7 +242,7 @@
 	p
 		font-size: 24px
 		margin-bottom: 40px
-	
+
 
 .tabs
 	padding:
@@ -302,7 +327,6 @@
 		.swiper-button-disabled
 			opacity: .35 !important
 
-
 	h4
 		font-size: 18px
 		margin-bottom: 25px
@@ -382,6 +406,7 @@
 			font-weight: 500
 			font-size: 16px
 			margin: 0 5px
+			padding: 0 5px
 
 		a
 			display: block
@@ -396,11 +421,10 @@
 		&_quantity
 			display: flex
 			justify-content: space-between
-			flex-wrap: wrap
 			margin-bottom: 0
 			transition: all .6s
 
-		&_block		
+		&_block
 			p
 				font-size: 16px
 				color: #cbcdcc
@@ -530,14 +554,11 @@
 
 	h3
 		margin-bottom: 0
-
-
 	
 	&__wrap
 		position: relative
 		display: flex
 		justify-content: space-between
-		align-items: center
 		background-color: $white
 		max-width: 1290px
 		width: 100%
@@ -554,12 +575,7 @@
 
 	&__item
 		position: relative
-		display: flex
-		flex-direction: column
-		justify-content: space-around
-		align-items: center
-		width: 33.333%
-		height: 100%
+		width: 33.3333%
 		padding: 
 			top: 165px
 			bottom: 110px
@@ -569,6 +585,7 @@
 
 		img
 			margin-bottom: 55px
+			max-width: 90%
 
 		&--green
 			border-right: none
@@ -596,6 +613,7 @@
 	&__container
 		display: flex
 		justify-content: space-between
+		flex-wrap: wrap
 
 	&__form
 		max-width: 480px
@@ -615,9 +633,10 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
-
+		padding: 0
+	
 	&__col
-
+		padding: 0 15px
 
 	&__info
 		background-color: #e1e1e1
@@ -627,7 +646,9 @@
 		background-color: #cfcfcf
 		padding: 15px 0
 		font-size: 16px
-
+	
+	img
+		width: 20px
 
 
 
