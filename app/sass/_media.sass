@@ -2,6 +2,11 @@
 	body
 		font-size: 16px
 
+	input
+		font-size: 16px
+		&::placeholder
+			font-size: 16px
+
 	.container
 		max-width: 1200px
 
@@ -20,8 +25,28 @@
 	.btn
 		font-size: 22px
 
+	.hero
+		padding: 
+			top: 100px
+			bottom: 160px
+
+	.tabs
+		padding: 
+			top: 40px
+			bottom: 60px
+
 	.cart
+		margin-bottom: 60px
+
+		h4
+			margin-bottom: 15px
+
+		&__img
+			margin-bottom: 15px
+
 		&__form
+			margin-bottom: 15px
+
 			input
 				width: 40px
 
@@ -33,11 +58,8 @@
 					margin-bottom: 5px
 
 	.tabs__list
-		margin-bottom: 90px
-
-	.cart
 		margin-bottom: 70px
-	
+
 	.street
 		&__wrap
 			width: 80%
@@ -56,7 +78,7 @@
 
 
 	.info
-		padding: 90px 0
+		padding: 70px 0
 
 		&__form
 			width: 40%
@@ -77,11 +99,38 @@
 	body
 		font-size: 14px
 	
+	input
+		font-size: 14px
+		&::placeholder
+			font-size: 14px
+	
 	h2
 		font-size: 26px
 
 	h3
 		font-size: 22px
+
+	.cabinet
+		h4
+			margin-bottom: 30px
+
+		&__nav
+			margin-bottom: 40px
+
+			a
+				padding: 0 40px 10px 40px
+
+
+		&__container
+			padding: 40px
+
+		&__block
+			max-width: 48%
+			margin-bottom: 40px
+
+		.btn
+			max-width: 48%
+
 
 	.header
 		&__logo
@@ -101,16 +150,6 @@
 	
 		&__profile
 			font-size: 18px !important
-
-	.hero
-		padding: 
-			top: 100px
-			bottom: 160px
-
-	.tabs
-		padding: 
-			top: 40px
-			bottom: 60px
 
 	.cart
 		width: 33.333%
@@ -248,10 +287,6 @@
 		&:focus
 			margin-top: 0
 
-		&__img,
-		h4
-			margin-bottom: 15px
-
 		&__form
 			margin-bottom: 10px
 
@@ -277,7 +312,8 @@
 	.street,
 	.info,
 	.about,
-	.favorites
+	.favorites,
+	.cabinet
 		padding: 40px 0
 
 	.about
@@ -322,6 +358,22 @@
 
 	h3
 		font-size: 18px
+
+	.cabinet
+		h4
+			margin-bottom: 20px
+
+		&__nav
+			margin-bottom: 30px
+
+			a
+				padding: 0 20px 10px 20px
+
+		&__block
+			margin-bottom: 30px
+
+		&__line
+			margin-bottom: 15px
 
 	.hero
 		background-position: 0
@@ -415,7 +467,31 @@
 
 	h2
 		font-size: 24px
-	
+
+	.cabinet
+		&__container
+			padding: 20px
+
+		&__nav
+			border: none
+
+			ul
+				justify-content: space-around
+
+			li
+				width: 100%
+
+			a
+				margin-bottom: 20px
+				border-bottom: 1px solid #e1e1e1
+				text-align: center
+
+		&__block
+			max-width: 100%
+
+		.btn
+			max-width: 100%
+
 	.header
 		height: 50px
 
@@ -447,12 +523,17 @@
 			flex-wrap: wrap
 
 		&__item
+			padding: 20px 0
 			width: 100%
 			border-right: none
 			border-bottom: 1px solid #d7d7d7
 
 			&--green
 				border-bottom: none
+
+			img
+				max-height: 110px
+				margin-bottom: 15px
 				
 	.tabs
 		&__link
@@ -463,6 +544,9 @@
 
 		&__container
 			justify-content: space-around
+
+		&__col
+			width: 100%
 
 
 	.map
